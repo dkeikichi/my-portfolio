@@ -124,6 +124,37 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .contact-info h1 {
+            margin-bottom: 10px;
+            font-size: 32px;
+            color: #333;
+        }
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 18px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .contact-info .icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
         .section-title {
             font-size: 24px;
             margin-bottom: 20px;
@@ -136,6 +167,8 @@
             font-size: 20px;
             margin: 10px 0;
             color: #0066cc;
+            display: flex;
+            align-items: center;
         }
         .experience-item p {
             margin: 5px 0;
@@ -157,17 +190,34 @@
             margin-top: 20px;
             color: #333;
         }
+        .company-logo {
+            height: 24px; /* Controls the size of the logo */
+            width: auto; /* Adjusts width automatically to maintain aspect ratio */
+            margin-right: 10px; /* Space between the logo and text */
+        }
+        .University {
+            height: 80px; /* Controls the size of the logo */
+            width: auto; /* Adjusts width automatically to maintain aspect ratio */
+            margin-right: 10px; /* Space between the logo and text */
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="contact-info">
+            <h1>Keikichi Den</h1>
+            <p><img class="icon" src="./png-transparent-computer-icons-resume-linkedin-logo-job-hunting-others-blue-angle-text-thumbnail.png" alt="LinkedIn"> <a href="https://www.linkedin.com/in/keikichi-d-5282451a9">田 慶吉's LinkedIn Profile</a></p>
+            <p><img class="icon" src="./smartphone-call.png" alt="Phone"> +81 8096615271 (mobile)</p>
+            <p><img class="icon" src="./mail000000.png" alt="Email"> <a href="mailto:dkeikichi@gmail.com">dkeikichi@gmail.com (preferred)</a></p>
+        </div>
+
         <div class="section-title">Experience</div>
         
         <div class="experience-item">
-            <h3>NIPPON EXPRESS GROUP</h3>
+            <h3><img class="company-logo" src="NX_logo.svg.png" alt="Nippon Express">NIPPON EXPRESS GROUP</h3>
             <span>9 mos, Kyoto, Japan</span>
             <h4>Information System Developer</h4>
-            <span>Permanent, Apr 2024 - Present (3 mos)</span>
+            <span>Permanent, Oct 2023 - Present</span>
             <ul>
                 <li>Data Mapping: Developed and implemented precise data mapping solutions.</li>
                 <li>Task Automation: Automated task workflows to improve efficiency.</li>
@@ -182,13 +232,11 @@
                     <li>データ処理、分析、および可視化: Pythonを使用して数千のデータを効果的に処理および分析しました。</li>
                 </ul>
             </div>
-            <h4>Information System Developer</h4>
-            <span>Contract, Oct 2023 - Mar 2024 (6 mos)</span>
         </div>
 
         <div class="experience-item">
-            <h3>AGC Group - Permanent</h3>
-            <span>Jul 2022 - Sep 2023 (1 yr 3 mos), Shenzhen, Guangdong, China</span>
+            <h3><img class="company-logo" src="AGC_Logo.svg.png" alt="AGC Group">AGC Group</h3>
+            <span>Jul 2022 - Sep 2023, Shenzhen, Guangdong, China</span>
             <h4>Digital Transformation Officer</h4>
             <p>
                 After joining AGC Inc., I was primarily responsible for overseeing IT-related matters across AGC’s various locations in China. My specific duties included acting as a communication liaison between AGC headquarters and the Chinese sites, conducting server maintenance and inspection, addressing printer issues, and managing initial setup and configuration of devices. Additionally, I was responsible for translating technical documents, creating and organizing procedural manuals, and serving as an instructor for IT foundational training. To further the digital transformation (DX) initiatives at each site, I also led the development and implementation of Robotic Process Automation (RPA) projects, utilizing Python to automate business processes.
@@ -201,7 +249,7 @@
         <div class="section-title">Education</div>
         
         <div class="experience-item">
-            <h3>Tokyo City University</h3>
+            <h3><img class="University" src="./tokyo_city_university_resized_no_background.png" alt="Tokyo City University">Tokyo City University</h3>
             <p>B.A. Information and Communication Engineering, Information</p>
             <span>2018 - 2022</span>
         </div>
