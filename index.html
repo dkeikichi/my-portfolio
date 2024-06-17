@@ -142,12 +142,21 @@
             justify-content: center;
             flex-wrap: wrap;
         }
-        .contact-info a {
-            color: #0066cc;
+        .contact-info a, .contact-info button {
             text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px 15px;
+            font-size: 16px;
+            margin: 10px 5px;
+            color: brown;
+            /* background-color: #87CEEB; Sky blue */
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
-        .contact-info a:hover {
-            text-decoration: underline;
+        .contact-info a:hover, .contact-info button:hover {
+            background-color: wheat; /* Deeper sky blue for hover effect */
         }
         .contact-info .icon {
             display: inline-block;
@@ -155,6 +164,13 @@
             height: 24px;
             vertical-align: middle;
             margin-right: 10px;
+        }
+        .contact-info .unstyled-link {
+            color: #333;
+            text-decoration: none;
+        }
+        .contact-info .unstyled-link:hover {
+            text-decoration: underline;
         }
         .section-title {
             font-size: 24px;
@@ -202,6 +218,12 @@
             margin-right: 10px; /* Space between the logo and text */
         }
 
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
         /* Responsive design for smaller screens */
         @media (max-width: 768px) {
             .container {
@@ -238,6 +260,13 @@
             .contact-info a {
                 word-break: break-all;
             }
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn-download {
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
@@ -245,9 +274,13 @@
     <div class="container">
         <div class="contact-info">
             <h1>Keikichi Den</h1>
-            <p><img class="icon" src="./png-transparent-computer-icons-resume-linkedin-logo-job-hunting-others-blue-angle-text-thumbnail.png" alt="LinkedIn"> <a href="https://www.linkedin.com/in/keikichi-d-5282451a9">田 慶吉's LinkedIn Profile</a></p>
+            <p><img class="icon" src="./png-transparent-computer-icons-resume-linkedin-logo-job-hunting-others-blue-angle-text-thumbnail.png" alt="LinkedIn"> <a class="unstyled-link" href="https://www.linkedin.com/in/keikichi-d-5282451a9">田 慶吉's LinkedIn Profile</a></p>
             <p><img class="icon" src="./smartphone-call.png" alt="Phone"> +81 8096615271 (mobile)</p>
-            <p><img class="icon" src="./mail000000.png" alt="Email"> <a href="mailto:dkeikichi@gmail.com">dkeikichi@gmail.com (preferred)</a></p>
+            <p><img class="icon" src="./mail000000.png" alt="Email"> <a class="unstyled-link" href="mailto:dkeikichi@gmail.com">dkeikichi@gmail.com (preferred)</a></p>
+            <div class="button-container">
+                <a class="btn-download" href="resume1.pdf" download>Resume (English)</a>
+                <button class="btn-download" onclick="downloadMultipleFiles()">Resume (Japanese)</button>
+            </div>
         </div>
 
         <div class="section-title">Experience</div>
@@ -293,6 +326,20 @@
             <span>2018 - 2022</span>
         </div>
     </div>
+
+    <script>
+        function downloadMultipleFiles() {
+            const files = ['resume2.pdf', 'resume3.pdf'];
+            files.forEach(file => {
+                const link = document.createElement('a');
+                link.href = file;
+                link.download = file.split('/').pop();
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        }
+    </script>
 </body>
 </html>
 
