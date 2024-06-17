@@ -272,7 +272,7 @@
             <p><img class="icon" src="./mail000000.png" alt="Email"> <a class="no-underline" href="mailto:dkeikichi@gmail.com">dkeikichi@gmail.com (preferred)</a></p>
             <div class="button-container">
                 <a class="btn-download" href="./(QingjiTian)CV.pdf" download><b>Download CV<br>(English)</b></a>
-                <button class="btn-download" onclick="downloadMultipleFiles()"><b>Download CV<br>(Japanese)</b></button>
+                <a class="btn-download" href="./(KeikichiDen田慶吉)履歴書_職務経歴書_merged.pdf" download><b>Download CV<br>(Japanese)</b></a>
             </div>
         </div>
 
@@ -335,18 +335,5 @@
         </div>
     </div>
 
-    <script>
-        function downloadMultipleFiles() {
-            const files = ['./(KeikichiDen田慶吉)履歴書20230624.pdf', './(KeikichiDen田慶吉)職務経歴書20230624.pdf'];
-            files.forEach(file => {
-                const link = document.createElement('a');
-                link.href = file;
-                link.download = file.split('/').pop();
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            });
-        }
-    </script>
 </body>
 </html>
