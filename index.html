@@ -131,12 +131,12 @@
         .contact-info h1 {
             margin-bottom: 10px;
             font-size: 32px;
-            color: #333;
+            /* color: #333; */
         }
         .contact-info p {
             margin: 5px 0;
             font-size: 18px;
-            color: #666;
+            /* color: #666; */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -150,13 +150,13 @@
             padding: 8px 15px;
             font-size: 16px;
             margin: 10px 5px;
-            color: brown;
+            color: black;
             /* background-color: #87CEEB; Sky blue */
             border-radius: 5px;
             transition: background-color 0.3s;
         }
         .contact-info a:hover, .contact-info button:hover {
-            background-color: wheat; /* Deeper sky blue for hover effect */
+            background-color: skyblue; /* Deeper sky blue for hover effect */
         }
         .contact-info .icon {
             display: inline-block;
@@ -164,13 +164,6 @@
             height: 24px;
             vertical-align: middle;
             margin-right: 10px;
-        }
-        .contact-info .unstyled-link {
-            color: #333;
-            text-decoration: none;
-        }
-        .contact-info .unstyled-link:hover {
-            text-decoration: underline;
         }
         .section-title {
             font-size: 24px;
@@ -274,9 +267,9 @@
     <div class="container">
         <div class="contact-info">
             <h1>Keikichi Den</h1>
-            <p><img class="icon" src="./png-transparent-computer-icons-resume-linkedin-logo-job-hunting-others-blue-angle-text-thumbnail.png" alt="LinkedIn"> <a class="unstyled-link" href="https://www.linkedin.com/in/keikichi-d-5282451a9">田 慶吉's LinkedIn Profile</a></p>
+            <p><img class="icon" src="./png-transparent-computer-icons-resume-linkedin-logo-job-hunting-others-blue-angle-text-thumbnail.png" alt="LinkedIn"> <a href="https://www.linkedin.com/in/keikichi-d-5282451a9">田 慶吉's LinkedIn Profile</a></p>
             <p><img class="icon" src="./smartphone-call.png" alt="Phone"> +81 8096615271 (mobile)</p>
-            <p><img class="icon" src="./mail000000.png" alt="Email"> <a class="unstyled-link" href="mailto:dkeikichi@gmail.com">dkeikichi@gmail.com (preferred)</a></p>
+            <p><img class="icon" src="./mail000000.png" alt="Email"> <a href="mailto:dkeikichi@gmail.com">dkeikichi@gmail.com (preferred)</a></p>
             <div class="button-container">
                 <a class="btn-download" href="resume1.pdf" download>Resume (English)</a>
                 <button class="btn-download" onclick="downloadMultipleFiles()">Resume (Japanese)</button>
@@ -287,7 +280,7 @@
         
         <div class="experience-item">
             <h3><img class="company-logo" src="NX_logo.svg.png" alt="Nippon Express">NIPPON EXPRESS GROUP</h3>
-            <span>Kyoto, Japan</span>
+            <span>9 mos, Kyoto, Japan</span>
             <h4>Information System Developer</h4>
             <span>Permanent, Oct 2023 - Present</span>
             <ul>
