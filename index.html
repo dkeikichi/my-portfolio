@@ -140,6 +140,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
         }
         .contact-info a {
             color: #0066cc;
@@ -199,6 +200,44 @@
             height: 80px; /* Controls the size of the logo */
             width: auto; /* Adjusts width automatically to maintain aspect ratio */
             margin-right: 10px; /* Space between the logo and text */
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                margin: 20px auto;
+                padding: 10px;
+            }
+            .contact-info h1 {
+                font-size: 28px;
+            }
+            .contact-info p {
+                font-size: 16px;
+                margin: 10px 0;
+            }
+            .section-title {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+            .experience-item h3 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-info p {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .contact-info .icon {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+            .contact-info a {
+                word-break: break-all;
+            }
         }
     </style>
 </head>
