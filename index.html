@@ -131,12 +131,10 @@
         .contact-info h1 {
             margin-bottom: 10px;
             font-size: 32px;
-            /* color: #333; */
         }
         .contact-info p {
             margin: auto;
             font-size: 18px;
-            /* color: #666; */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -151,12 +149,11 @@
             font-size: 16px;
             margin: 10px 5px;
             color: black;
-            /* background-color: #87CEEB; Sky blue */
             border-radius: 5px;
             transition: background-color 0.3s;
         }
         .contact-info a:hover, .contact-info button:hover {
-            background-color: #c5d9ed; /* Deeper sky blue for hover effect */
+            background-color: #c5d9ed;
         }
         .contact-info .icon {
             display: inline-block;
@@ -201,19 +198,20 @@
             color: #333;
         }
         .company-logo {
-            height: 24px; /* Controls the size of the logo */
-            width: auto; /* Adjusts width automatically to maintain aspect ratio */
-            margin-right: 10px; /* Space between the logo and text */
+            height: 24px;
+            width: auto;
+            margin-right: 10px;
         }
         .University {
-            height: 50px; /* Controls the size of the logo */
-            width: auto; /* Adjusts width automatically to maintain aspect ratio */
-            margin-right: 10px; /* Space between the logo and text */
+            height: 35px;
+            width: auto;
+            margin-right: 10px;
         }
 
         .button-container {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 10px;
         }
 
@@ -245,20 +243,22 @@
                 flex-direction: column;
                 align-items: flex-start;
                 text-align: left;
+                justify-content: flex-start;
             }
-            .contact-info .icon {
+            /* .contact-info .icon {
                 margin-right: 0;
                 margin-bottom: 5px;
-            }
+            } */
             .contact-info a {
                 word-break: break-all;
             }
             .button-container {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
             }
             .btn-download {
-                margin: 5px 0;
+                margin: 5px;
             }
         }
     </style>
@@ -268,19 +268,19 @@
         <div class="contact-info">
             <h1>Keikichi Den</h1>
             <p><img class="icon" src="./png-transparent-computer-icons-resume-linkedin-logo-job-hunting-others-blue-angle-text-thumbnail.png" alt="LinkedIn"> <a href="https://www.linkedin.com/in/keikichi-d-5282451a9">田 慶吉's LinkedIn Profile</a></p>
-            <p><img class="icon" src="./smartphone-call.png" alt="Phone"> +81 8096615271 (mobile)</p>
+            <p><img class="icon" src="./smartphone-call.png" alt="Phone"> +81 8096615271</p>
             <p><img class="icon" src="./mail000000.png" alt="Email"> <a href="mailto:dkeikichi@gmail.com">dkeikichi@gmail.com (preferred)</a></p>
             <div class="button-container">
-                <a class="btn-download" href="resume1.pdf" download>Resume (English)</a>
-                <button class="btn-download" onclick="downloadMultipleFiles()">Resume (Japanese)</button>
+                <a class="btn-download" href="./(QingjiTian)CV.pdf" download><b>Download CV<br>(English)<b></a>
+                <button class="btn-download" onclick="downloadMultipleFiles()"><b>Download CV<br>(Japanese)</b></button>
             </div>
         </div>
 
-        <div class="section-title">Experience</div>
+        <div class="section-title"><b>Experience</b></div>
         
         <div class="experience-item">
             <h3><img class="company-logo" src="NX_logo.svg.png" alt="Nippon Express">NIPPON EXPRESS GROUP</h3>
-            <span>9 mos, Kyoto, Japan</span>
+            <span>Kyoto, Japan</span>
             <h4>Information System Developer</h4>
             <span>Permanent, Oct 2023 - Present</span>
             <ul>
@@ -311,7 +311,7 @@
             </div>
         </div>
 
-        <div class="section-title">Education</div>
+        <div class="section-title"><b>Education</b></div>
         
         <div class="experience-item">
             <h3><img class="University" src="./tcu.png" alt="Tokyo City University">Tokyo City University</h3>
@@ -322,7 +322,7 @@
 
     <script>
         function downloadMultipleFiles() {
-            const files = ['resume2.pdf', 'resume3.pdf'];
+            const files = ['./(KeikichiDen田慶吉)履歴書20230624.pdf', './(KeikichiDen田慶吉)職務経歴書20230624.pdf'];
             files.forEach(file => {
                 const link = document.createElement('a');
                 link.href = file;
