@@ -215,6 +215,10 @@
             gap: 10px;
         }
 
+        a.no-underline {
+            text-decoration: none;
+        }
+
         /* Responsive design for smaller screens */
         @media (max-width: 768px) {
             .container {
@@ -245,10 +249,6 @@
                 text-align: left;
                 justify-content: flex-start;
             }
-            /* .contact-info .icon {
-                margin-right: 0;
-                margin-bottom: 5px;
-            } */
             .contact-info a {
                 word-break: break-all;
             }
@@ -267,11 +267,11 @@
     <div class="container">
         <div class="contact-info">
             <h1>Keikichi Den</h1>
-            <p><img class="icon" src="./png-transparent-computer-icons-resume-linkedin-logo-job-hunting-others-blue-angle-text-thumbnail.png" alt="LinkedIn"> <a href="https://www.linkedin.com/in/keikichi-d-5282451a9">田 慶吉's LinkedIn Profile</a></p>
+            <p><img class="icon" src="./png-transparent-computer-icons-resume-linkedin-logo-job-hunting-others-blue-angle-text-thumbnail.png" alt="LinkedIn"> <a class="no-underline" href="https://www.linkedin.com/in/keikichi-d-5282451a9">田 慶吉's LinkedIn Profile</a></p>
             <p><img class="icon" src="./smartphone-call.png" alt="Phone"> +81 8096615271</p>
-            <p><img class="icon" src="./mail000000.png" alt="Email"> <a href="mailto:dkeikichi@gmail.com">dkeikichi@gmail.com (preferred)</a></p>
+            <p><img class="icon" src="./mail000000.png" alt="Email"> <a class="no-underline" href="mailto:dkeikichi@gmail.com">dkeikichi@gmail.com (preferred)</a></p>
             <div class="button-container">
-                <a class="btn-download" href="./(QingjiTian)CV.pdf" download><b>Download CV<br>(English)<b></a>
+                <a class="btn-download" href="./(QingjiTian)CV.pdf" download><b>Download CV<br>(English)</b></a>
                 <button class="btn-download" onclick="downloadMultipleFiles()"><b>Download CV<br>(Japanese)</b></button>
             </div>
         </div>
@@ -279,42 +279,57 @@
         <div class="section-title"><b>Experience</b></div>
         
         <div class="experience-item">
-            <h3><img class="company-logo" src="NX_logo.svg.png" alt="Nippon Express">NIPPON EXPRESS GROUP</h3>
-            <span>Kyoto, Japan</span>
+            <a class="no-underline" href="https://www.nipponexpress.com/" target="_blank">
+                <h3><img class="company-logo" src="NX_logo.svg.png" alt="Nippon Express">NIPPON EXPRESS GROUP</h3>
+            </a>
+            <span> Oct 2023 - Present, Kyoto, Japan</span>
             <h4>Information System Developer</h4>
-            <span>Permanent, Oct 2023 - Present</span>
             <ul>
-                <li>Data Mapping: Developed and implemented precise data mapping solutions.</li>
-                <li>Task Automation: Automated task workflows to improve efficiency.</li>
-                <li>Troubleshooting: Resolved network connection issues promptly.</li>
-                <li>Data Processing, Analysis, and Visualization: Utilized Python to handle and analyze thousands of data effectively.</li>
+                <li>&#9830; Data Mapping: Developed and implemented precise data mapping solutions.</li>
+                <li>&#9830; Task Automation: Automated task workflows to improve efficiency.</li>
+                <li>&#9830; Troubleshooting: Resolved network connection issues promptly.</li>
+                <li>&#9830; Data Processing, Analysis, and Visualization: Utilized Python to handle and analyze thousands of data effectively.</li>
             </ul>
             <div class="japanese">
                 <ul>
-                    <li>データマッピング: 正確なデータマッピングソリューションの開発および実装を行いました。</li>
-                    <li>タスク自動化: タスクのワークフローを自動化し、効率を向上させました。</li>
-                    <li>トラブルシューティング: ネットワーク接続の問題を迅速に解決しました。</li>
-                    <li>データ処理、分析、および可視化: Pythonを使用して数千のデータを効果的に処理および分析しました。</li>
+                    <li>&#9830; データマッピング: 正確なデータマッピングソリューションの開発および実装を行いました。</li>
+                    <li>&#9830; タスク自動化: タスクのワークフローを自動化し、効率を向上させました。</li>
+                    <li>&#9830; トラブルシューティング: ネットワーク接続の問題を迅速に解決しました。</li>
+                    <li>&#9830; データ処理、分析、および可視化: Pythonを使用して数千のデータを効果的に処理および分析しました。</li>
                 </ul>
             </div>
         </div>
 
         <div class="experience-item">
-            <h3><img class="company-logo" src="AGC_Logo.svg.png" alt="AGC Group">AGC Group</h3>
+            <a class="no-underline" href="https://www.agc.com/" target="_blank">
+                <h3><img class="company-logo" src="AGC_Logo.svg.png" alt="AGC Group">AGC Group</h3>
+            </a>
             <span>Jul 2022 - Sep 2023, Shenzhen, Guangdong, China</span>
             <h4>Digital Transformation Officer</h4>
-            <p>
-                After joining AGC Inc., I was primarily responsible for overseeing IT-related matters across AGC’s various locations in China. My specific duties included acting as a communication liaison between AGC headquarters and the Chinese sites, conducting server maintenance and inspection, addressing printer issues, and managing initial setup and configuration of devices. Additionally, I was responsible for translating technical documents, creating and organizing procedural manuals, and serving as an instructor for IT foundational training. To further the digital transformation (DX) initiatives at each site, I also led the development and implementation of Robotic Process Automation (RPA) projects, utilizing Python to automate business processes.
-            </p>
+            <ul>
+                <li>&#9830; After joining AGC Inc., I was primarily responsible for overseeing IT-related matters across AGC’s various locations in China.</li>
+                <li>&#9830; Acting as a communication liaison between AGC headquarters and the Chinese sites.</li>
+                <li>&#9830; Conducting server maintenance and inspection, addressing printer issues, and managing initial setup and configuration of devices.</li>
+                <li>&#9830; Translating technical documents, creating and organizing procedural manuals, and serving as an instructor for IT foundational training.</li>
+                <li>&#9830; Leading the development and implementation of Robotic Process Automation (RPA) projects, utilizing Python to automate business processes to further the digital transformation (DX) initiatives at each site.</li>
+            </ul>
             <div class="japanese">
-                AGC 株式会社へ入社後、主に AGC 中国各拠点の IT 関連全般を担当。具体的な業務内容としては、AGC 本社と中国各拠点とのコミュニケーション窓口において、サーバ点検・保守、プリンタトラブル対応、端末の初期設定・キッティング等を担った。このほか、技術文書の翻訳、手順書の作成・整理、IT 基礎教育講師等も担当。また、各拠点の DX を推進するため、RPA(Robotic Process Automation) の開発・導入を担当し、Python を利用した業務の自動化を行った。
+              <ul>
+                AGC 株式会社へ入社後、主に AGC 中国各拠点の IT 関連全般を担当。具体的な業務内容としては、
+                <li>&#9830; AGC 本社と中国各拠点とのコミュニケーション窓口において、サーバ点検・保守、プリンタトラブル対応</li>
+                <li>&#9830; 端末の初期設定・キッティング等を担った。</li>
+                <li>&#9830; このほか、技術文書の翻訳、手順書の作成・整理、IT 基礎教育講師等も担当。</li>
+                <li>&#9830; また、各拠点の DX を推進するため、RPA(Robotic Process Automation) の開発・導入を担当し、Python を利用した業務の自動化を行った。</li>
+              </ul>
             </div>
         </div>
 
         <div class="section-title"><b>Education</b></div>
         
         <div class="experience-item">
-            <h3><img class="University" src="./tcu.png" alt="Tokyo City University">Tokyo City University</h3>
+            <a class="no-underline" href="https://www.tcu.ac.jp/" target="_blank">
+                <h3><img class="University" src="./tcu.png" alt="Tokyo City University">Tokyo City University</h3>
+            </a>
             <p>B.A. Information and Communication Engineering, Information</p>
             <span>2018 - 2022</span>
         </div>
