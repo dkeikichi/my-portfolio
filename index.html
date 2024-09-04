@@ -103,7 +103,6 @@
   </body>
 </html>
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,6 +122,22 @@
             background: #fff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .profile-picture {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .contact-info {
             text-align: center;
@@ -207,19 +222,15 @@
             width: auto;
             margin-right: 10px;
         }
-
         .button-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 10px;
         }
-
         a.no-underline {
             text-decoration: none;
         }
-
-        /* Responsive design for smaller screens */
         @media (max-width: 768px) {
             .container {
                 width: 90%;
@@ -240,8 +251,13 @@
             .experience-item h3 {
                 font-size: 18px;
             }
+            .profile-picture {
+                width: 100px;
+                height: 100px;
+                top: 10px;
+                right: 10px;
+            }
         }
-
         @media (max-width: 480px) {
             .contact-info p {
                 flex-direction: column;
@@ -265,6 +281,9 @@
 </head>
 <body>
     <div class="container">
+        <div class="profile-picture">
+            <img src="IMG_1545.JPG" alt="Keikichi Den">
+        </div>
         <div class="contact-info">
             <h1>Keikichi Den</h1>
             <p><img class="icon" src="./linkedin_174857.png" alt="LinkedIn"> <a class="no-underline" href="https://www.linkedin.com/in/keikichi-d-5282451a9">田 慶吉's LinkedIn Profile</a></p>
@@ -304,12 +323,12 @@
 
         <div class="experience-item">
             <a class="no-underline" href="https://www.agc.com/" target="_blank">
-                <h3><img class="company-logo" src="AGC_Logo.svg.png" alt="AGC Group">AGC Group</h3>
+                <h3><img class="company-logo" src="AGC_Logo.svg.png" alt="AGC GROUP">AGC GROUP</h3>
             </a>
             <span>Jul 2022 - Sep 2023, Shenzhen, Guangdong, China</span>
             <h4>Digital Transformation Officer</h4>
             <ul>
-                <li>&#9830; After joining AGC Inc., I was primarily responsible for overseeing IT-related matters across AGC’s various locations in China.</li>
+                <li>&#9830; After joining AGC Inc., I was primarily responsible for overseeing IT-related matters across AGC's various locations in China.</li>
                 <li>&#9830; Acting as a communication liaison between AGC headquarters and the Chinese sites.</li>
                 <li>&#9830; Conducting server maintenance and inspection, addressing printer issues, and managing initial setup and configuration of devices.</li>
                 <li>&#9830; Translating technical documents, creating and organizing procedural manuals, and serving as an instructor for IT foundational training.</li>
@@ -336,6 +355,5 @@
             <span>2018 - 2022</span>
         </div>
     </div>
-
 </body>
 </html>
