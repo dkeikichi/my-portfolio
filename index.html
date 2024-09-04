@@ -103,12 +103,13 @@
   </body>
 </html>
 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Keikichi Den's Resume</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -211,14 +212,14 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 20px;
+            margin-top: 30px;
         }
 
         a.no-underline {
             text-decoration: none;
         }
 
-        /* New styles for profile picture */
         .profile-picture {
             width: 150px;
             height: 150px;
@@ -228,7 +229,29 @@
             display: block;
         }
 
-        /* Responsive design for smaller screens */
+        .btn-download {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #0066cc;
+            color: black !important;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .btn-download:hover {
+            background-color: #0052a3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .btn-download::before {
+            content: "⬇ ";
+            margin-right: 5px;
+        }
+
         @media (max-width: 768px) {
             .container {
                 width: 90%;
@@ -253,6 +276,10 @@
                 width: 120px;
                 height: 120px;
             }
+            .btn-download {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -266,12 +293,12 @@
                 word-break: break-all;
             }
             .button-container {
-                flex-direction: row;
-                flex-wrap: nowrap;
-                justify-content: center;
+                flex-direction: column;
+                align-items: center;
             }
             .btn-download {
-                margin: 5px;
+                width: 80%;
+                text-align: center;
             }
             .profile-picture {
                 width: 100px;
@@ -289,8 +316,8 @@
             <p><img class="icon" src="./smartphone-call.png" alt="Phone"> +81 8096615271</p>
             <p><img class="icon" src="./mail000000.png" alt="Email"> <a class="no-underline" href="mailto:dkeikichi@gmail.com">dkeikichi@gmail.com (preferred)</a></p>
             <div class="button-container">
-                <a class="btn-download" href="./(QingjiTian)CV.pdf" download><b>Download CV<br>(English)</b></a>
-                <a class="btn-download" href="./(KeikichiDen田慶吉)履歴書_職務経歴書_merged.pdf" download><b>Download CV<br>(Japanese)</b></a>
+                <a class="btn-download" href="./(QingjiTian)CV.pdf" download>Download CV (English)</a>
+                <a class="btn-download" href="./(KeikichiDen田慶吉)履歴書_職務経歴書_merged.pdf" download>Download CV (Japanese)</a>
             </div>
         </div>
 
