@@ -120,13 +120,13 @@
             width: 60%;
             margin: 50px auto;
             background: #fff;
-            padding: 20px;
+            padding: 40px 20px 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             position: relative;
         }
         .profile-picture {
             position: absolute;
-            top: 20px;
+            top: -30px;
             right: 20px;
             width: 150px;
             height: 150px;
@@ -235,7 +235,16 @@
             .container {
                 width: 90%;
                 margin: 20px auto;
-                padding: 10px;
+                padding: 60px 10px 10px;
+            }
+            .profile-picture {
+                width: 100px;
+                height: 100px;
+                top: -50px;
+                right: 10px;
+            }
+            .contact-info {
+                padding-top: 30px;
             }
             .contact-info h1 {
                 font-size: 28px;
@@ -251,14 +260,18 @@
             .experience-item h3 {
                 font-size: 18px;
             }
-            .profile-picture {
-                width: 100px;
-                height: 100px;
-                top: 10px;
-                right: 10px;
-            }
         }
         @media (max-width: 480px) {
+            .profile-picture {
+                width: 80px;
+                height: 80px;
+                top: -40px;
+                right: 50%;
+                transform: translateX(50%);
+            }
+            .contact-info {
+                padding-top: 50px;
+            }
             .contact-info p {
                 flex-direction: column;
                 align-items: flex-start;
@@ -282,7 +295,7 @@
 <body>
     <div class="container">
         <div class="profile-picture">
-            <img src="IMG_1545.JPG" alt="Keikichi Den">
+            <img src="your-photo.jpg" alt="Keikichi Den">
         </div>
         <div class="contact-info">
             <h1>Keikichi Den</h1>
@@ -323,7 +336,7 @@
 
         <div class="experience-item">
             <a class="no-underline" href="https://www.agc.com/" target="_blank">
-                <h3><img class="company-logo" src="AGC_Logo.svg.png" alt="AGC GROUP">AGC GROUP</h3>
+                <h3><img class="company-logo" src="AGC_Logo.svg.png" alt="AGC Group">AGC GROUP</h3>
             </a>
             <span>Jul 2022 - Sep 2023, Shenzhen, Guangdong, China</span>
             <h4>Digital Transformation Officer</h4>
