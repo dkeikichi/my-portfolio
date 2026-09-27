@@ -29,7 +29,8 @@ FONT_FILE = os.path.join(FONT_DIR, 'ArchivoExpanded-BlackItalic.ttf')
 
 NAVY, BLUE, SKY, SKY_LIGHT = '#062a56', '#0b4d94', '#2f7fe0', '#7db9f0'
 PALETTES = {
-    'color': dict(word=NAVY, lit=SKY, shade=NAVY, lit2=SKY_LIGHT, shade2=BLUE),
+    # navy wordmark with a bright-blue star, so the star still reads on dark backgrounds
+    'color': dict(word=NAVY, lit=SKY_LIGHT, shade=SKY, lit2='#b9dafa', shade2='#5a9ff0'),
     'white': dict(word='#ffffff', lit='#ffffff', shade='#9cc8f4', lit2='#cfe3fa', shade2=SKY_LIGHT),
 }
 LIGHT_DIR = (-0.6, -0.8)   # rays are lit from the upper left
