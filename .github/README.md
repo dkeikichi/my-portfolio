@@ -1,4 +1,9 @@
-[![KEIKICHI DEN](/brand/logo-black.png)](https://dkeikichi.com/)
+<a href="https://dkeikichi.com/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/brand/logo-large-star-transparent.png">
+    <img src="/brand/logo-transparent.png" alt="KEIKICHI DEN">
+  </picture>
+</a>
 
 # dkeikichi.com
 
@@ -371,9 +376,9 @@ Search Console の **URL検査** で次の2つを入力し、「インデック�
 | ファイル | 用途 |
 |---|---|
 | `brand/logo.svg` / `logo-white.svg` | ロゴ全体（星が大きい版）。白背景用 / 暗い背景用。サイトのヘッダー（黒）は `logo-white.svg` を使用。名刺・資料向け |
-| `brand/logo-transparent.png` / `logo-white-transparent.png` | ロゴ全体の背景透過PNG（横3000px）。明るい背景用 / 暗い背景用。SVGが使えないアプリ・資料・SNS向け |
-| `brand/logo-large-star-transparent.png` | 白ロゴ（星が大きい版、サイトのヘッダーと同じ）の背景透過PNG（3000×727px）。`logo-white-transparent.png` と同じ画像を、分かりやすい名前で保存したもの |
-| `brand/logo-black.png` | 黒背景（`#0a0c10`、サイトのヘッダーと同じ色）に白ロゴ（星が大きい版）のPNG（3000×860px）。この README のバナー |
+| `brand/logo-transparent.png` / `logo-white-transparent.png` | ロゴ全体の背景透過PNG（横3000px）。明るい背景用 / 暗い背景用。SVGが使えないアプリ・資料・SNS向け。`logo-transparent.png` は GitHub のライトモードで表示する README のバナー |
+| `brand/logo-large-star-transparent.png` | 白ロゴ（星が大きい版、サイトのヘッダーと同じ）の背景透過PNG（3000×727px）。`logo-white-transparent.png` と同じ画像を、分かりやすい名前で保存したもの。GitHub のダークモードで表示する README のバナー |
+| `brand/logo-black.png` | 黒背景（`#0a0c10`、サイトのヘッダーと同じ色）に白ロゴ（星が大きい版）のPNG（3000×860px）。背景色が必要な資料・SNS向け |
 | `brand/logo-navy.png` | 紺背景（`#062a56`）に白ロゴのPNG（3000×860px）。名刺・資料の表紙・署名向け |
 | `brand/logo-compact.svg` / `logo-compact-white.svg` | 星を控えめにした版。高さが限られる場所向け |
 | `brand/mark.svg` | 星のアイコン（紺の角丸四角）。ファビコン |
