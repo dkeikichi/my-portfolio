@@ -373,7 +373,7 @@ Search Console の **URL検査** で次の2つを入力し、「インデック�
 | `brand/logo.svg` / `logo-white.svg` | ロゴ全体（星が大きい版）。白背景用 / 青背景用。名刺・資料向け |
 | `brand/logo-transparent.png` / `logo-white-transparent.png` | ロゴ全体の背景透過PNG（横3000px）。明るい背景用 / 暗い背景用。SVGが使えないアプリ・資料・SNS向け |
 | `brand/logo-navy.png` | 紺背景（`#062a56`）に白ロゴのPNG（3000×860px）。この README のバナー。名刺・資料の表紙・署名向け |
-| `brand/logo-compact.svg` / `logo-compact-white.svg` | 星を控えめにした版。サイトのヘッダー（紺）には白版 `logo-compact-white.svg` を使用 |
+| `brand/logo-compact.svg` / `logo-compact-white.svg` | 星を控えめにした版。サイトのヘッダー（黒）には白版 `logo-compact-white.svg` を使用 |
 | `brand/mark.svg` | 星のアイコン（紺の角丸四角）。ファビコン |
 | `brand/favicon-192.png` | ファビコン（192px） |
 | `favicon.ico` | ファビコン（16/32/48px。Google 検索結果用） |
@@ -548,7 +548,7 @@ python3 -m http.server 8000
 - SEO 対策：タイトル・説明文、構造化データ、canonical、robots.txt、sitemap.xml、画像の軽量化、フォントの読み込み改善
 - 英語版（`/`）と日本語版（`/ja/`）を別ページに分割（hreflang 対応）
 - 共有画像（SNS・README のバナー）から勤務先を外し、名前を大きくして「IT ENGINEER · TOKYO」に
-- ロゴの北極星をブライトブルーに（カラー版）。サイトのヘッダーを紺にして白ロゴを表示
+- ロゴの北極星をブライトブルーに（カラー版）。サイトのヘッダーを黒にして白ロゴを表示
 - README を作成（`.github/README.md`）
 
 ---
