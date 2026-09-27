@@ -26,10 +26,11 @@ Personal portfolio of Keikichi Den, IT engineer at ANA Systems — a static site
 10. [履歴書PDF](#10-履歴書pdf)
 11. [アクセス解析](#11-アクセス解析)
 12. [公開の仕組み（GitHub Pages）](#12-公開の仕組みgithub-pages)
-13. [アーカイブ](#13-アーカイブ)
-14. [困ったとき](#14-困ったとき)
-15. [更新履歴](#15-更新履歴)
-16. [クレジット](#16-クレジット)
+13. [ブランチと作業の流れ](#13-ブランチと作業の流れ)
+14. [アーカイブ](#14-アーカイブ)
+15. [困ったとき](#15-困ったとき)
+16. [更新履歴](#16-更新履歴)
+17. [クレジット](#17-クレジット)
 
 ---
 
@@ -77,7 +78,7 @@ _src/index.template.html  （英語と日本語を並べて書いた元ファイ
 | `google1739cd937b765b4b.html` | Google Search Console の所有者確認ファイル | ❌ **消さない**（消すと確認が外れる） |
 | `.github/README.md` | このファイル | ✅ |
 | `.gitignore` | Git に含めないファイル（`brand/.fonts/` など） | ❌ |
-| `_archive*` | 以前のサイトの保存（[13章](#13-アーカイブ)） | ❌ |
+| `_archive*` | 以前のサイトの保存（[14章](#14-アーカイブ)） | ❌ |
 | ルートの `IMG_1545.JPG`・`*_Logo*.png`・`tcu.png` など | 縮小前の元画像。`IMG_1545.JPG` は構造化データの写真として使用中 | ❌ |
 
 > `_` で始まるフォルダ（`_src`、`_archive*`）と `.` で始まるフォルダ（`.github`）は、GitHub Pages では公開されません。
@@ -439,7 +440,58 @@ Google 検索での表示回数・クリック数・検索キーワードは、G
 
 ---
 
-## 13. アーカイブ
+## 13. ブランチと作業の流れ
+
+**ブランチ**は、同じサイトのファイル一式を別々に並べて保存しておく仕組みです。本番に影響を与えずに修正を準備できます。
+
+| ブランチ | 役割 |
+|---|---|
+| `main` | **本番用**。ここに入った内容が dkeikichi.com に公開されます |
+| `claude/vibrant-johnson-n1lc3i` | **Claude Code の作業用**。修正をまずここに置き、確認してから `main` に反映します |
+| `dependabot/…` | Dependabot が自動で作る更新依頼（PR）用。マージまたはクローズすると自動で消えます |
+
+### 作業の流れ（Claude Code に依頼した場合）
+
+```
+修正 ─▶ 作業用ブランチに push ─▶ 確認（スクリーンショットなど）─▶ main に反映 ─▶ 約1分で公開
+```
+
+### Branches 画面の見方
+
+リポジトリの **Code → Branches**（またはブランチ名のメニュー → View all branches）で開きます。
+
+| 列 | 意味 |
+|---|---|
+| Updated | 最後に更新された時刻 |
+| Check status | 自動チェック（サイトの公開処理など）の結果。✓ 3 / 3 なら3件すべて成功 |
+| Behind / Ahead | Behind＝`main` にあってこのブランチにない変更の数、Ahead＝このブランチにあって `main` にない変更の数。**0 / 0 なら `main` と完全に同じ** |
+| Pull request | 変更の取り込み依頼（PR）があれば表示 |
+
+画面は次の区分に分かれています。同じブランチが複数の区分に表示されることがあります。
+
+- **Default**：既定のブランチ（`main`）
+- **Your branches**：自分のアカウントで push したブランチ。Claude Code はあなたのアカウントの権限で push するため、作業用ブランチもここに表示されます
+- **Active branches**：最近更新されたブランチ
+
+### 作業用ブランチは消してよいか
+
+- **Behind / Ahead が 0 / 0 のとき**：内容はすべて `main` に入っているので、消しても何も失われません。行の右のゴミ箱アイコンで消せます。次に Claude Code に修正を頼んだときは、必要に応じて作り直されます。
+- **Ahead が1以上のとき**：まだ `main` に入っていない変更があるので、消さないでください。
+
+### GitHub の画面で直接直すとき
+
+ブラウザ上では `python3 _src/build_pages.py` を実行できません。
+
+- ✅ **直接直してよい**：`styles.css`、`script.js`、`.github/README.md`、PDF の差し替え
+- ❌ **直接直さない**：`index.html`・`ja/index.html`・`sitemap.xml`（自動生成）。文章の修正は、テンプレートを直して作り直せる環境（手元のPC、または Claude Code）で行います
+
+### Dependabot の更新依頼（PR）
+
+`_archive` の古いプロジェクトについて、Dependabot がライブラリの更新依頼（PR）を自動で作ることがあります。`_archive` はサイトに公開されないので、マージしてもクローズしても**サイトの表示には影響しません**（マージすると公開処理が1回動きますが、表示は変わりません）。依頼自体を止めたい場合は、Settings → Code security で Dependabot を無効にします。
+
+---
+
+## 14. アーカイブ
 
 以前のサイトを、フォルダごと保存しています。どれもサイトには公開されません。
 
@@ -461,7 +513,7 @@ python3 -m http.server 8000
 
 ---
 
-## 14. 困ったとき
+## 15. 困ったとき
 
 | 症状 | 原因 | 対処 |
 |---|---|---|
@@ -475,10 +527,11 @@ python3 -m http.server 8000
 | Google 検索のアイコンやタイトルが古い | Google がまだ読み直していない | URL検査でインデックス登録をリクエストし、数日〜数週間待つ |
 | Cloudflare のアクセス数が0 | 公開直後、広告ブロッカー、キャッシュ | 数分待つ／ブロッカーのないスマホで開く |
 | ロゴのスクリプトがフォントの取得に失敗 | ネットワーク制限 | Google Fonts に接続できる環境で実行する |
+| Branches に見慣れないブランチがある | Claude Code の作業用、または Dependabot の更新依頼用 | [13章](#13-ブランチと作業の流れ)を参照。Behind / Ahead が 0 / 0 なら消してよい |
 
 ---
 
-## 15. 更新履歴
+## 16. 更新履歴
 
 **2026-09-27**
 - ANA Systems の職歴を追加。職歴の書き方を他社とそろえ、PC表示で1行に
@@ -492,10 +545,12 @@ python3 -m http.server 8000
 - Cloudflare Web Analytics を導入
 - SEO 対策：タイトル・説明文、構造化データ、canonical、robots.txt、sitemap.xml、画像の軽量化、フォントの読み込み改善
 - 英語版（`/`）と日本語版（`/ja/`）を別ページに分割（hreflang 対応）
+- 共有画像（SNS・README のバナー）から勤務先を外し、名前を大きくして「IT ENGINEER · TOKYO」に
+- README を作成（`.github/README.md`）
 
 ---
 
-## 16. クレジット
+## 17. クレジット
 
 - フォント：[Inter](https://fonts.google.com/specimen/Inter)・[Noto Sans JP](https://fonts.google.com/noto/specimen/Noto+Sans+JP)・[Archivo](https://fonts.google.com/specimen/Archivo)（いずれも SIL Open Font License 1.1）
 - 各社・大学のロゴは、それぞれの所有者の商標です。勤務先・出身校を示す目的で掲載しています。
