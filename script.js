@@ -4,7 +4,11 @@
 (function () {
     var enBtn = document.getElementById('lang-en-btn');
     var jaBtn = document.getElementById('lang-ja-btn');
-    var titles = { en: 'Keikichi Den — IT Engineer', ja: '田 慶吉 — ITエンジニア' };
+    // Keep the English title in sync with <title> in index.html: Google reads the title after scripts run.
+    var titles = {
+        en: 'Keikichi Den (田 慶吉) — IT Engineer at ANA Systems',
+        ja: '田 慶吉（デン ケイキチ）— ANAシステムズ ITエンジニア'
+    };
 
     function setLang(lang) {
         document.documentElement.lang = lang;
