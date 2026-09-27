@@ -24,6 +24,8 @@
             try { saved = localStorage.getItem('lang'); } catch (e) {}
             var lang = saved || ((navigator.language || '').toLowerCase().indexOf('ja') === 0 ? 'ja' : 'en');
             document.documentElement.lang = lang;
+            // Scroll-reveal hides cards until script.js shows them; only opt in when JS runs.
+            document.documentElement.className += ' js';
         })();
     </script>
 </head>
@@ -66,7 +68,7 @@
             </h1>
             <p class="hero-tagline">
                 <span class="lang-en">Building dependable IT infrastructure that helps ANA unite the world in wonder.</span>
-                <span class="lang-ja"><span class="phrase">「ワクワクで満たされる世界を」支える、</span><span class="phrase">安心・安全なITインフラを届けます。</span></span>
+                <span class="lang-ja"><span class="phrase">「ワクワクで満たされる世界を」</span><span class="phrase">支える、</span><span class="phrase">安心・安全なITインフラを届けます。</span></span>
             </p>
             <div class="hero-actions">
                 <a class="btn btn-primary" href="KeikichiDen_CV_EN.pdf" download>
@@ -133,7 +135,7 @@
                             </a>
                             <div class="job-heading">
                                 <h3>
-                                    <a href="https://www.ana.co.jp/group/" target="_blank" rel="noopener">ANA Systems</a>
+                                    <a href="https://www.ana.co.jp/group/" target="_blank" rel="noopener"><span class="lang-en">ANA Systems</span><span class="lang-ja">ANAシステムズ</span></a>
                                     <span class="badge"><span class="lang-en">Current</span><span class="lang-ja">現職</span></span>
                                 </h3>
                                 <p class="job-role">
@@ -165,7 +167,7 @@
                                 <img class="job-logo" src="Lenovo-Logo-scaled.webp" alt="Lenovo">
                             </a>
                             <div class="job-heading">
-                                <h3><a href="https://www.lenovo.com/" target="_blank" rel="noopener">Lenovo Japan</a></h3>
+                                <h3><a href="https://www.lenovo.com/" target="_blank" rel="noopener"><span class="lang-en">Lenovo Japan</span><span class="lang-ja">レノボ・ジャパン</span></a></h3>
                                 <p class="job-role">
                                     <span class="lang-en">Associate Technical Consultant</span>
                                     <span class="lang-ja">アソシエート・テクニカルコンサルタント</span>
@@ -178,17 +180,17 @@
                         </div>
                         <ul class="job-bullets">
                             <li class="lang-en">Customized and tested Windows master images for enterprise deployment</li>
-                            <li class="lang-ja">エンタープライズ向けWindowsマスターイメージのカスタマイズおよびテストを実施</li>
+                            <li class="lang-ja">企業向けWindowsマスターイメージのカスタマイズおよびテストを実施</li>
                             <li class="lang-en">Fully automated PC kitting with Batch and PowerShell, greatly reducing setup time</li>
                             <li class="lang-ja">BatchおよびPowerShellスクリプトでキッティング作業をフル自動化し、作業時間を大幅に短縮</li>
                             <li class="lang-en">Managed provisioning and configuration of multiple devices via Intune and Autopilot</li>
                             <li class="lang-ja">IntuneおよびAutopilotを活用したマルチデバイスのプロビジョニングおよび設定を管理</li>
-                            <li class="lang-en">Provided expert consulting on AMD and NVIDIA driver implementation for enterprises, including ISV integration</li>
+                            <li class="lang-en">Provided expert AMD and NVIDIA driver consulting to enterprises, including ISVs</li>
                             <li class="lang-ja">ISVを含む企業向けのAMDおよびNVIDIAドライバー実装に関する専門的なコンサルティングを提供</li>
                             <li class="lang-en">Advised on AI customization for internal use and enterprise AI security best practices</li>
-                            <li class="lang-ja">社内向けAIカスタマイズおよびエンタープライズAIセキュリティに関する事例提案</li>
-                            <li class="lang-en">Served as a Windows expert, ensuring optimal compatibility and robust stability for customer environments</li>
-                            <li class="lang-ja">Windowsエキスパートとして、顧客の環境に最適な互換性と堅牢な安定性を実現</li>
+                            <li class="lang-ja">社内向けAIカスタマイズおよび企業向けAIセキュリティに関する事例提案</li>
+                            <li class="lang-en">As a Windows expert, ensured optimal compatibility and robust stability for clients</li>
+                            <li class="lang-ja">Windowsエキスパートとして、お客様の環境に最適な互換性と堅牢な安定性を実現</li>
                         </ul>
                     </article>
                 </li>
@@ -202,7 +204,7 @@
                                 <img class="job-logo" src="NX_logo.svg.png" alt="Nippon Express">
                             </a>
                             <div class="job-heading">
-                                <h3><a href="https://www.nipponexpress.com/" target="_blank" rel="noopener">Nippon Express Group</a></h3>
+                                <h3><a href="https://www.nipponexpress.com/" target="_blank" rel="noopener"><span class="lang-en">Nippon Express Group</span><span class="lang-ja">日本通運</span></a></h3>
                                 <p class="job-role">
                                     <span class="lang-en">Information System Developer</span>
                                     <span class="lang-ja">情報システム開発</span>
@@ -235,7 +237,7 @@
                                 <img class="job-logo" src="AGC_Logo.svg.png" alt="AGC">
                             </a>
                             <div class="job-heading">
-                                <h3><a href="https://www.agc.com/" target="_blank" rel="noopener">AGC Group</a></h3>
+                                <h3><a href="https://www.agc.com/" target="_blank" rel="noopener"><span class="lang-en">AGC Group</span><span class="lang-ja">AGC</span></a></h3>
                                 <p class="job-role">
                                     <span class="lang-en">Digital Transformation Engineer</span>
                                     <span class="lang-ja">DX推進担当</span>
@@ -251,11 +253,11 @@
                             <li class="lang-ja">AGC中国各拠点のIT関連全般を担当</li>
                             <li class="lang-en">Acted as communication liaison between AGC headquarters and the Chinese sites</li>
                             <li class="lang-ja">AGC本社と中国各拠点とのコミュニケーション窓口を担当</li>
-                            <li class="lang-en">Conducted server maintenance and inspection, printer troubleshooting, and device setup and configuration</li>
+                            <li class="lang-en">Conducted server maintenance, printer troubleshooting, and device setup and kitting</li>
                             <li class="lang-ja">サーバー点検・保守、プリンタートラブル対応、端末の初期設定・キッティング等を実施</li>
-                            <li class="lang-en">Translated technical documents, organized procedural manuals, and served as an IT foundational training instructor</li>
+                            <li class="lang-en">Translated technical documents, organized manuals, and taught IT fundamentals</li>
                             <li class="lang-ja">技術文書の翻訳、手順書の作成・整理、IT基礎教育講師を担当</li>
-                            <li class="lang-en">Led RPA development and implementation, using Python to automate business processes and drive DX at each site</li>
+                            <li class="lang-en">Led RPA development and Python automation to drive DX across all sites</li>
                             <li class="lang-ja">各拠点のDX推進のためRPAの開発・導入を主導し、Pythonを利用した業務の自動化を実現</li>
                         </ul>
                     </article>

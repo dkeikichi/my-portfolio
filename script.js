@@ -4,9 +4,11 @@
 (function () {
     var enBtn = document.getElementById('lang-en-btn');
     var jaBtn = document.getElementById('lang-ja-btn');
+    var titles = { en: 'Keikichi Den — IT Engineer', ja: '田 慶吉 — ITエンジニア' };
 
     function setLang(lang) {
         document.documentElement.lang = lang;
+        document.title = titles[lang];
         try { localStorage.setItem('lang', lang); } catch (e) {}
         var isEn = lang === 'en';
         enBtn.classList.toggle('active', isEn);

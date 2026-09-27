@@ -445,7 +445,7 @@ html[lang="ja"] .badge { letter-spacing: 0.02em; }
     margin: 0;
     font-size: 15px;
     font-weight: 500;
-    color: var(--sky);
+    color: #256ec9; /* darker than --sky to reach 4.5:1 on white */
 }
 
 .job-date {
@@ -536,18 +536,19 @@ html[lang="ja"] .badge { letter-spacing: 0.02em; }
 .footer-copy {
     margin: 0;
     font-size: 13.5px;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.75);
 }
 
 /* ============================================================
    REVEAL ANIMATION
    ============================================================ */
-.reveal {
+/* .js is set in <head>, so content stays visible if JavaScript is unavailable */
+.js .reveal {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
-.reveal.visible {
+.js .reveal.visible {
     opacity: 1;
     transform: none;
 }
@@ -584,6 +585,11 @@ html[lang="ja"] .badge { letter-spacing: 0.02em; }
     .btn { padding: 11px 18px; font-size: 14px; }
 }
 
+/* very narrow phones: kana is already shown above the name in the hero */
+@media (max-width: 360px) {
+    .brand-kana { display: none; }
+}
+
 /* ============================================================
    REDUCED MOTION
    ============================================================ */
@@ -594,5 +600,5 @@ html[lang="ja"] .badge { letter-spacing: 0.02em; }
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-    .reveal { opacity: 1; transform: none; }
+    .js .reveal { opacity: 1; transform: none; }
 }
