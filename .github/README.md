@@ -1,3 +1,5 @@
+[![KEIKICHI DEN — IT Engineer · ANA Systems · Tokyo](/brand/og-image.png)](https://dkeikichi.com/)
+
 # dkeikichi.com
 
 田 慶吉（Keikichi Den）のポートフォリオサイトです。
