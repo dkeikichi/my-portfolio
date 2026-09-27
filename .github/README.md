@@ -1,4 +1,4 @@
-[![KEIKICHI DEN — IT Engineer · Tokyo](/brand/og-image.png)](https://dkeikichi.com/)
+[![KEIKICHI DEN](/brand/logo-navy.png)](https://dkeikichi.com/)
 
 # dkeikichi.com
 
@@ -372,6 +372,7 @@ Search Console の **URL検査** で次の2つを入力し、「インデック�
 |---|---|
 | `brand/logo.svg` / `logo-white.svg` | ロゴ全体（星が大きい版）。白背景用 / 青背景用。名刺・資料向け |
 | `brand/logo-transparent.png` / `logo-white-transparent.png` | ロゴ全体の背景透過PNG（横3000px）。明るい背景用 / 暗い背景用。SVGが使えないアプリ・資料・SNS向け |
+| `brand/logo-navy.png` | 紺背景（`#062a56`）に白ロゴのPNG（3000×860px）。この README のバナー。名刺・資料の表紙・署名向け |
 | `brand/logo-compact.svg` / `logo-compact-white.svg` | ヘッダー用（星を控えめにした版） |
 | `brand/mark.svg` | 星のアイコン（紺の角丸四角）。ファビコン |
 | `brand/favicon-192.png` | ファビコン（192px） |
