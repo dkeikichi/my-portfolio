@@ -15,7 +15,7 @@
     --radius: 18px;
     --shadow: 0 10px 30px rgba(10, 62, 124, 0.10);
     --shadow-hover: 0 16px 40px rgba(10, 62, 124, 0.16);
-    --nav-h: 64px;
+    --nav-h: 76px;   /* tall enough for the large-star logo */
 }
 
 * { box-sizing: border-box; }
@@ -70,10 +70,10 @@ html[lang="ja"] .lang-en { display: none !important; }
     flex-shrink: 0;
 }
 
-/* North Star logo (brand/logo-compact-white.svg); width follows the SVG's aspect ratio */
+/* North Star logo, large-star version (brand/logo-white.svg); width follows the SVG's aspect ratio */
 .brand-logo {
     display: block;
-    height: 34px;
+    height: 58px;
     width: auto;
 }
 
@@ -547,14 +547,15 @@ html[lang="ja"] .badge { letter-spacing: 0.02em; }
 /* tablets: make room for logo, section links and language toggle in one row */
 @media (max-width: 900px) {
     .nav { gap: 14px; }
-    .brand-logo { height: 28px; }
+    .brand-logo { height: 49px; }
     .nav-links a { padding: 7px 8px; font-size: 14px; }
 }
 
 @media (max-width: 720px) {
+    :root { --nav-h: 64px; }   /* keep the header compact on phones */
     .nav { gap: 12px; }
     .nav-links { display: none; }
-    .brand-logo { height: 28px; }
+    .brand-logo { height: 48px; }
     .lang-toggle { margin-left: auto; }
 
     .hero { padding-bottom: 120px; }
@@ -583,10 +584,10 @@ html[lang="ja"] .badge { letter-spacing: 0.02em; }
 
 /* narrow phones: shrink the logo so it fits beside the language toggle */
 @media (max-width: 380px) {
-    .brand-logo { height: 24px; }
+    .brand-logo { height: 42px; }
 }
 @media (max-width: 340px) {
-    .brand-logo { height: 21px; }
+    .brand-logo { height: 37px; }
 }
 
 /* ============================================================
