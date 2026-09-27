@@ -230,6 +230,8 @@ html[lang="ja"] .hero-kicker { letter-spacing: 0.06em; }
     font-size: clamp(16px, 2.2vw, 19px);
     color: rgba(255, 255, 255, 0.92);
 }
+/* keep Japanese phrases intact so lines break at the comma, not mid-word */
+.hero-tagline .phrase { display: inline-block; }
 
 .hero-actions {
     display: flex;
@@ -322,6 +324,7 @@ html[lang="ja"] .hero-kicker { letter-spacing: 0.06em; }
     padding: clamp(22px, 4vw, 34px);
 }
 .about-card p { margin: 0; color: #33475e; }
+.about-card p + p { margin-top: 1em; }
 
 /* ============================================================
    TIMELINE
@@ -560,6 +563,7 @@ html[lang="ja"] .badge { letter-spacing: 0.02em; }
     .hero { padding-bottom: 120px; }
     .hero-plane { display: none; }
     .hero-photo { width: 132px; height: 132px; }
+    .hero-kicker { font-size: 12px; letter-spacing: 0.1em; }
 
     .timeline { padding-left: 40px; }
     .timeline::before { left: 11px; }
