@@ -65,27 +65,14 @@ html[lang="ja"] .lang-en { display: none !important; }
 .nav-brand {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-weight: 800;
-    font-size: 17px;
-    color: var(--deep);
-    text-decoration: none;
-    letter-spacing: 0.01em;
+    flex-shrink: 0;
 }
 
-.brand-plane {
-    width: 26px;
-    height: 26px;
-    fill: var(--sky);
-}
-.brand-plane .fold { fill: none; stroke: var(--bg); stroke-width: 2.5; }
-
-.brand-kana {
-    margin-left: 8px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    color: var(--muted);
+/* North Star logo (brand/logo-compact.svg); width follows the SVG's aspect ratio */
+.brand-logo {
+    display: block;
+    height: 34px;
+    width: auto;
 }
 
 .nav-links {
@@ -556,10 +543,18 @@ html[lang="ja"] .badge { letter-spacing: 0.02em; }
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+/* tablets: make room for logo, section links and language toggle in one row */
+@media (max-width: 900px) {
+    .nav { gap: 14px; }
+    .brand-logo { height: 28px; }
+    .nav-links a { padding: 7px 8px; font-size: 14px; }
+}
+
 @media (max-width: 720px) {
     .nav { gap: 12px; }
     .nav-links { display: none; }
-    .nav-brand { font-size: 15px; }
+    .brand-logo { height: 28px; }
+    .lang-toggle { margin-left: auto; }
 
     .hero { padding-bottom: 120px; }
     .hero-plane { display: none; }
@@ -585,9 +580,12 @@ html[lang="ja"] .badge { letter-spacing: 0.02em; }
     .btn { padding: 11px 18px; font-size: 14px; }
 }
 
-/* very narrow phones: kana is already shown above the name in the hero */
-@media (max-width: 360px) {
-    .brand-kana { display: none; }
+/* narrow phones: shrink the logo so it fits beside the language toggle */
+@media (max-width: 380px) {
+    .brand-logo { height: 24px; }
+}
+@media (max-width: 340px) {
+    .brand-logo { height: 21px; }
 }
 
 /* ============================================================
