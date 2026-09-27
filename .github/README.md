@@ -380,6 +380,7 @@ Search Console の **URL検査** で次の2つを入力し、「インデック�
 | `brand/logo-large-star-transparent.png` | 白ロゴ（星が大きい版、サイトのヘッダーと同じ）の背景透過PNG（3000×727px）。`logo-white-transparent.png` と同じ画像を、分かりやすい名前で保存したもの。GitHub のダークモードで表示する README のバナー |
 | `brand/logo-black.png` | 黒背景（`#0a0c10`、サイトのヘッダーと同じ色）に白ロゴ（星が大きい版）のPNG（3000×860px）。背景色が必要な資料・SNS向け |
 | `brand/logo-navy.png` | 紺背景（`#062a56`）に白ロゴのPNG（3000×860px）。名刺・資料の表紙・署名向け |
+| `brand/logo-large-star-navy.png` | 紺背景に白ロゴ（星が大きい版）のPNG（3000×860px）。`logo-navy.png` と同じ画像を、分かりやすい名前で保存したもの |
 | `brand/logo-compact.svg` / `logo-compact-white.svg` | 星を控えめにした版。高さが限られる場所向け |
 | `brand/mark.svg` | 星のアイコン（紺の角丸四角）。ファビコン |
 | `brand/favicon-192.png` | ファビコン（192px） |
