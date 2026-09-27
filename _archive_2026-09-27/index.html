@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keikichi Den — IT Engineer</title>
+    <meta name="description" content="Keikichi Den (田 慶吉) — IT Engineer at ANA Systems, Tokyo. Network infrastructure, enterprise Windows, and systems that keep people moving.">
+    <meta property="og:title" content="Keikichi Den — IT Engineer">
+    <meta property="og:description" content="IT Engineer at ANA Systems, Tokyo.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dkeikichi.com">
+    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230b4d94"/><path d="M10 33 L54 13 L39 52 L30 39 Z" fill="white"/><path d="M30 39 L54 13" stroke="%230b4d94" stroke-width="2.5" fill="none"/></svg>'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Set language before first paint to avoid a flash of the wrong language.
+        (function () {
+            var saved = null;
+            try { saved = localStorage.getItem('lang'); } catch (e) {}
+            var lang = saved || ((navigator.language || '').toLowerCase().indexOf('ja') === 0 ? 'ja' : 'en');
+            document.documentElement.lang = lang;
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="nav">
+        <a class="nav-brand" href="#top">
+            <svg class="brand-plane" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 33 L54 13 L39 52 L30 39 Z"/><path class="fold" d="M30 39 L54 13"/></svg>
+            <span class="lang-en">Keikichi Den</span><span class="lang-ja">田 慶吉<span class="brand-kana">デン ケイキチ</span></span>
+        </a>
+        <nav class="nav-links" aria-label="Sections">
+            <a href="#about"><span class="lang-en">About</span><span class="lang-ja">自己紹介</span></a>
+            <a href="#experience"><span class="lang-en">Experience</span><span class="lang-ja">職務経歴</span></a>
+            <a href="#education"><span class="lang-en">Education</span><span class="lang-ja">学歴</span></a>
+            <a href="#contact"><span class="lang-en">Contact</span><span class="lang-ja">連絡先</span></a>
+        </nav>
+        <div class="lang-toggle" role="group" aria-label="Language / 言語">
+            <button type="button" id="lang-en-btn" aria-pressed="true">EN</button>
+            <button type="button" id="lang-ja-btn" aria-pressed="false">日本語</button>
+        </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+        <div class="hero-clouds" aria-hidden="true"></div>
+        <svg class="hero-plane" viewBox="0 0 200 120" aria-hidden="true">
+            <path class="trail" d="M8 108 C 60 88, 110 70, 168 34" fill="none"/>
+            <path class="plane" d="M168 34 l26 -10 -14 22 -6 -8 z"/>
+        </svg>
+        <div class="hero-inner">
+            <img src="IMG_1545.JPG" alt="Keikichi Den / 田 慶吉" class="hero-photo">
+            <p class="hero-kicker">
+                <span class="lang-en">IT Engineer · ANA Systems · Tokyo</span>
+                <span class="lang-ja">ITエンジニア · ANAシステムズ · 日本・東京</span>
+            </p>
+            <h1 class="hero-name">
+                <span class="lang-en">Keikichi Den</span>
+                <span class="lang-ja"><ruby>田<rt>デン</rt></ruby> <ruby>慶<rt>ケイ</rt></ruby><ruby>吉<rt>キチ</rt></ruby></span>
+            </h1>
+            <p class="hero-tagline">
+                <span class="lang-en">Building dependable IT infrastructure that helps ANA unite the world in wonder.</span>
+                <span class="lang-ja">「ワクワクで満たされる世界を」支える、安心・安全なITインフラを届けます。</span>
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="./(QingjiTian)CV.pdf" download>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10m0 0l-4-4m4 4l4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span class="lang-en">CV (English)</span><span class="lang-ja">英文履歴書</span>
+                </a>
+                <a class="btn btn-outline" href="./(KeikichiDen田慶吉)履歴書_職務経歴書_merged.pdf" download>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10m0 0l-4-4m4 4l4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span class="lang-en">CV (Japanese)</span><span class="lang-ja">和文履歴書</span>
+                </a>
+                <a class="btn btn-outline" href="https://www.linkedin.com/in/keikichi-d-5282451a9" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11 21 13.9V21h-4v-6.3c0-1.5-.03-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21H9z"/></svg>
+                    LinkedIn
+                </a>
+                <a class="btn btn-outline" href="mailto:dkeikichi@gmail.com">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1zm0 1.5V17h16V7.5l-8 5.3z"/></svg>
+                    Email
+                </a>
+            </div>
+        </div>
+        <svg class="wave" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,64 C240,110 480,10 720,44 C960,78 1200,20 1440,58 L1440,110 L0,110 Z"/>
+        </svg>
+    </section>
+
+    <main>
+        <!-- ============ ABOUT ============ -->
+        <section id="about" class="section">
+            <h2 class="section-title">
+                <span class="lang-en">About</span><span class="lang-ja">自己紹介</span>
+            </h2>
+            <div class="card about-card reveal">
+                <p class="lang-en">Hello, my name is Keikichi Den. After graduating from university, I joined AGC Inc., where I was responsible for IT-related tasks across various locations in China. My work included server maintenance, printer troubleshooting, device setup, translating technical documents, and teaching basic IT courses. I also led RPA development and automation using Python, improving system efficiency as part of our digital transformation efforts. Later, missing life in Japan, I decided to move back in October 2023 and joined Nippon Express Co., Ltd. At Nippon Express, I focused on system operations, automation with RPA and batch scripts, data processing and analysis using Python, as well as EDI data mapping. I also provided IT support, including network troubleshooting and verifying printer drivers. To continuously stay ahead of the latest trends in the IT industry, aiming to become a top-tier global technologist, I joined Lenovo Japan in November 2024, where I was responsible for customizing and testing enterprise Windows master images, providing specialized consulting on AMD and Nvidia driver implementation for enterprise clients including ISVs, offering advice on AI customization and enterprise AI security, and contributing to achieving optimal compatibility and robust stability in customer environments as a Windows expert. I joined ANA Systems in August 2026. Since I was a kid, I've always been fascinated by aviation, so being part of the ANA Group means a lot to me. I'm excited to use my IT background to contribute to ANA's vision of "Uniting the World in Wonder" and keep growing as an engineer.</p>
+                <p class="lang-ja">はじめまして、田 慶吉（デン ケイキチ）と申します。大学卒業後、AGC株式会社に入社し、中国各拠点のIT関連業務を担当。サーバ点検・保守、プリンタートラブル対応、端末初期設定・キッティング、技術文書の翻訳、手順書作成・整理、及びIT基礎教育講師を務める。DX推進のためRPA開発・導入を担当し、Pythonを利用した業務の自動化を実施。その後、良いチャンスに恵まれ、2023年10月に日本通運株式会社に転職。同社でRPAおよびバッチスクリプトを使用した業務自動化、Pythonによるデータ処理・分析、EDIデータマッピングを担当し、社内ネットワーク障害への対応やプリンタードライバーの動作確認を含むIT業務全般をサポート。IT業界の最新トレンドを追い続け、技術の最高峰、そのいただきを目指し、グローバルで勝ち続ける技術者となるため、2024年11月にLenovo Japanに転職。企業向けWindowsマスターイメージのカスタマイズおよびテストを担当し、ISVを含む企業向けのAMDおよびNvidiaドライバー実装に関する専門的なコンサルティングを提供。さらに、AIカスタマイズおよび企業向けAIセキュリティに関するアドバイスを実施し、Windowsエキスパートとして、顧客の環境に最適な互換性と堅牢な安定性の実現に貢献。2026年8月、ANAシステムズ株式会社に入社。幼い頃から空を自由に羽ばたくことに憧れを抱いており、航空業界は私にとって特別な存在である。品と質を代表するANAグループが掲げる「ワクワクで満たされる世界を」という理念に深く共感する。これまで培ってきたIT分野での経験を活かし、今後はANAグループの一員として、安全・安心で高品質なサービスを支えるシステムの提供に貢献する。</p>
+            </div>
+        </section>
+
+        <!-- ============ EXPERIENCE ============ -->
+        <section id="experience" class="section">
+            <h2 class="section-title">
+                <span class="lang-en">Experience</span><span class="lang-ja">職務経歴</span>
+            </h2>
+
+            <ol class="timeline">
+                <!-- ANA Systems -->
+                <li class="timeline-item reveal">
+                    <span class="timeline-marker current" aria-hidden="true">
+                        <svg viewBox="0 0 64 64"><path d="M10 33 L54 13 L39 52 L30 39 Z"/><path class="fold" d="M30 39 L54 13"/></svg>
+                    </span>
+                    <article class="card job-card current-job">
+                        <div class="job-header">
+                            <a href="https://www.ana.co.jp/group/" target="_blank" rel="noopener" class="job-logo-link">
+                                <img class="job-logo" src="All_Nippon_Airways_Logo.svg.png" alt="ANA">
+                            </a>
+                            <div class="job-heading">
+                                <h3>
+                                    <a href="https://www.ana.co.jp/group/" target="_blank" rel="noopener">ANA Systems</a>
+                                    <span class="badge"><span class="lang-en">Current</span><span class="lang-ja">現職</span></span>
+                                </h3>
+                                <p class="job-role">
+                                    <span class="lang-en">IT Engineer</span><span class="lang-ja">ITエンジニア</span>
+                                </p>
+                            </div>
+                            <p class="job-date">
+                                <span class="lang-en">Aug 2026 — Present<br>Tokyo, Japan</span>
+                                <span class="lang-ja">2026年8月 — 現在<br>日本・東京</span>
+                            </p>
+                        </div>
+                        <ul class="job-bullets">
+                            <li class="lang-en">Designed and maintained network infrastructure for stable, secure connectivity</li>
+                            <li class="lang-ja">ネットワークインフラの設計および保守を担当し、安定かつ安全な通信環境を維持</li>
+                            <li class="lang-en">Migrated a large-scale VDI from on-premises to the cloud, enabling access from anywhere</li>
+                            <li class="lang-ja">大規模な仮想デスクトップ基盤（VDI）をクラウドへ移行し、場所を問わない業務環境を実現</li>
+                            <li class="lang-en">Strengthened endpoint and security management for a secure yet seamless workplace</li>
+                            <li class="lang-ja">端末・セキュリティ管理を強化し、安全・快適なデジタルワークプレイスを構築</li>
+                        </ul>
+                    </article>
+                </li>
+
+                <!-- Lenovo -->
+                <li class="timeline-item reveal">
+                    <span class="timeline-marker" aria-hidden="true"></span>
+                    <article class="card job-card">
+                        <div class="job-header">
+                            <a href="https://www.lenovo.com/" target="_blank" rel="noopener" class="job-logo-link">
+                                <img class="job-logo" src="Lenovo-Logo-scaled.webp" alt="Lenovo">
+                            </a>
+                            <div class="job-heading">
+                                <h3><a href="https://www.lenovo.com/" target="_blank" rel="noopener">Lenovo Japan</a></h3>
+                                <p class="job-role">
+                                    <span class="lang-en">Associate Technical Consultant</span>
+                                    <span class="lang-ja">アソシエート・テクニカルコンサルタント</span>
+                                </p>
+                            </div>
+                            <p class="job-date">
+                                <span class="lang-en">Nov 2024 — Jun 2026<br>Tokyo, Japan</span>
+                                <span class="lang-ja">2024年11月 — 2026年6月<br>日本・東京</span>
+                            </p>
+                        </div>
+                        <ul class="job-bullets">
+                            <li class="lang-en">Customized and tested Windows Master Image for enterprise deployment</li>
+                            <li class="lang-ja">エンタープライズ向けWindowsマスターイメージのカスタマイズおよびテストを実施</li>
+                            <li class="lang-en">Automated testing processes using Batch and PowerShell scripting</li>
+                            <li class="lang-ja">BatchおよびPowerShellスクリプトによる業務プロセスのフル自動化</li>
+                            <li class="lang-en">Managed multiple device provisioning and configuration via Intune and Autopilot</li>
+                            <li class="lang-ja">IntuneおよびAutopilotを活用したマルチデバイスのプロビジョニングおよび設定を管理</li>
+                            <li class="lang-en">Provided expert consulting on AMD and Nvidia driver implementation for enterprises, including ISV integration</li>
+                            <li class="lang-ja">ISVを含む企業向けのAMDおよびNvidiaドライバー実装に関する専門的なコンサルティングを提供</li>
+                            <li class="lang-en">Advised on AI customization for internal use and enterprise AI security best practices</li>
+                            <li class="lang-ja">社内向けAIカスタマイズおよびエンタープライズAIセキュリティに関する事例提案</li>
+                            <li class="lang-en">Served as a Windows expert, ensuring optimal compatibility and robust stability for customer environments</li>
+                            <li class="lang-ja">Windowsエキスパートとして、顧客の環境に最適な互換性と堅牢な安定性を実現</li>
+                        </ul>
+                    </article>
+                </li>
+
+                <!-- Nippon Express -->
+                <li class="timeline-item reveal">
+                    <span class="timeline-marker" aria-hidden="true"></span>
+                    <article class="card job-card">
+                        <div class="job-header">
+                            <a href="https://www.nipponexpress.com/" target="_blank" rel="noopener" class="job-logo-link">
+                                <img class="job-logo" src="NX_logo.svg.png" alt="Nippon Express">
+                            </a>
+                            <div class="job-heading">
+                                <h3><a href="https://www.nipponexpress.com/" target="_blank" rel="noopener">Nippon Express Group</a></h3>
+                                <p class="job-role">
+                                    <span class="lang-en">Information System Developer</span>
+                                    <span class="lang-ja">情報システム開発</span>
+                                </p>
+                            </div>
+                            <p class="job-date">
+                                <span class="lang-en">Oct 2023 — Jul 2024<br>Kyoto, Japan</span>
+                                <span class="lang-ja">2023年10月 — 2024年7月<br>日本・京都</span>
+                            </p>
+                        </div>
+                        <ul class="job-bullets">
+                            <li class="lang-en">Data mapping: developed and implemented precise data mapping solutions</li>
+                            <li class="lang-ja">データマッピング: データマッピングソリューションの開発および実装</li>
+                            <li class="lang-en">Task automation: automated task workflows to improve efficiency</li>
+                            <li class="lang-ja">タスク自動化: タスクのワークフローを自動化</li>
+                            <li class="lang-en">Troubleshooting: resolved network connection issues promptly</li>
+                            <li class="lang-ja">トラブルシューティング: ネットワーク接続の問題を迅速に解決</li>
+                            <li class="lang-en">Data processing, analysis, and visualization with Python across thousands of records</li>
+                            <li class="lang-ja">Pythonを用いた数千件規模のデータ処理、分析、および可視化</li>
+                        </ul>
+                    </article>
+                </li>
+
+                <!-- AGC -->
+                <li class="timeline-item reveal">
+                    <span class="timeline-marker" aria-hidden="true"></span>
+                    <article class="card job-card">
+                        <div class="job-header">
+                            <a href="https://www.agc.com/" target="_blank" rel="noopener" class="job-logo-link">
+                                <img class="job-logo" src="AGC_Logo.svg.png" alt="AGC">
+                            </a>
+                            <div class="job-heading">
+                                <h3><a href="https://www.agc.com/" target="_blank" rel="noopener">AGC Group</a></h3>
+                                <p class="job-role">
+                                    <span class="lang-en">Digital Transformation Officer</span>
+                                    <span class="lang-ja">DX推進担当</span>
+                                </p>
+                            </div>
+                            <p class="job-date">
+                                <span class="lang-en">Jul 2022 — Sep 2023<br>Shenzhen, China</span>
+                                <span class="lang-ja">2022年7月 — 2023年9月<br>中国・深圳</span>
+                            </p>
+                        </div>
+                        <ul class="job-bullets">
+                            <li class="lang-en">Oversaw IT operations across AGC's various locations in China</li>
+                            <li class="lang-ja">AGC中国各拠点のIT関連全般を担当</li>
+                            <li class="lang-en">Acted as communication liaison between AGC headquarters and the Chinese sites</li>
+                            <li class="lang-ja">AGC本社と中国各拠点とのコミュニケーション窓口を担当</li>
+                            <li class="lang-en">Conducted server maintenance and inspection, printer troubleshooting, and device setup and configuration</li>
+                            <li class="lang-ja">サーバ点検・保守、プリンタトラブル対応、端末の初期設定・キッティング等を実施</li>
+                            <li class="lang-en">Translated technical documents, organized procedural manuals, and served as an IT foundational training instructor</li>
+                            <li class="lang-ja">技術文書の翻訳、手順書の作成・整理、IT基礎教育講師を担当</li>
+                            <li class="lang-en">Led RPA development and implementation, using Python to automate business processes and drive DX at each site</li>
+                            <li class="lang-ja">各拠点のDX推進のためRPAの開発・導入を主導し、Pythonを利用した業務の自動化を実現</li>
+                        </ul>
+                    </article>
+                </li>
+            </ol>
+        </section>
+
+        <!-- ============ EDUCATION ============ -->
+        <section id="education" class="section">
+            <h2 class="section-title">
+                <span class="lang-en">Education</span><span class="lang-ja">学歴</span>
+            </h2>
+            <article class="card job-card reveal">
+                <div class="job-header">
+                    <a href="https://www.tcu.ac.jp/" target="_blank" rel="noopener" class="job-logo-link">
+                        <img class="job-logo university" src="tcu.png" alt="Tokyo City University">
+                    </a>
+                    <div class="job-heading">
+                        <h3>
+                            <a href="https://www.tcu.ac.jp/" target="_blank" rel="noopener">
+                                <span class="lang-en">Tokyo City University</span><span class="lang-ja">東京都市大学</span>
+                            </a>
+                        </h3>
+                        <p class="job-role">
+                            <span class="lang-en">B.Eng. Information and Communication Engineering</span>
+                            <span class="lang-ja">情報通信工学科 学士（工学）</span>
+                        </p>
+                    </div>
+                    <p class="job-date">
+                        <span class="lang-en">2018 — 2022<br>Tokyo, Japan</span>
+                        <span class="lang-ja">2018 — 2022<br>日本・東京</span>
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER / CONTACT ============ -->
+    <footer id="contact" class="footer">
+        <svg class="wave wave-footer" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,64 C240,110 480,10 720,44 C960,78 1200,20 1440,58 L1440,110 L0,110 Z"/>
+        </svg>
+        <div class="footer-inner">
+            <h2 class="footer-title">
+                <span class="lang-en">Get in touch</span><span class="lang-ja">お問い合わせ</span>
+            </h2>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/keikichi-d-5282451a9" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11 21 13.9V21h-4v-6.3c0-1.5-.03-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21H9z"/></svg>
+                    LinkedIn
+                </a>
+                <a href="mailto:dkeikichi@gmail.com">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1zm0 1.5V17h16V7.5l-8 5.3z"/></svg>
+                    dkeikichi@gmail.com
+                    <span class="preferred"><span class="lang-en">(preferred)</span><span class="lang-ja">（推奨）</span></span>
+                </a>
+                <a href="tel:+818096615271">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.57 3.6 1 1 0 01-.25 1z"/></svg>
+                    +81 80 9661 5271
+                </a>
+            </div>
+            <p class="footer-copy">
+                © 2026 <span class="lang-en">Keikichi Den</span><span class="lang-ja">田 慶吉（デン ケイキチ）</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
