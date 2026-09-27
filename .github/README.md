@@ -373,20 +373,39 @@ Search Console の **URL検査** で次の2つを入力し、「インデック�
 
 ### ファイルと用途
 
-| ファイル | 用途 |
-|---|---|
-| `brand/logo.svg` / `logo-white.svg` | ロゴ全体（星が大きい版）。白背景用 / 暗い背景用。サイトのヘッダー（黒）は `logo-white.svg` を使用。名刺・資料向け |
-| `brand/logo-transparent.png` / `logo-white-transparent.png` | ロゴ全体の背景透過PNG（横3000px）。明るい背景用 / 暗い背景用。SVGが使えないアプリ・資料・SNS向け。`logo-transparent.png` は GitHub のライトモードで表示する README のバナー |
-| `brand/logo-large-star-transparent.png` | 白ロゴ（星が大きい版、サイトのヘッダーと同じ）の背景透過PNG（3000×727px）。`logo-white-transparent.png` と同じ画像を、分かりやすい名前で保存したもの。GitHub のダークモードで表示する README のバナー |
-| `brand/logo-black.png` | 黒背景（`#0a0c10`、サイトのヘッダーと同じ色）に白ロゴ（星が大きい版）のPNG（3000×860px）。背景色が必要な資料・SNS向け |
-| `brand/logo-navy.png` | 紺背景（`#062a56`）に白ロゴのPNG（3000×860px）。名刺・資料の表紙・署名向け |
-| `brand/logo-large-star-navy.png` | 紺背景に白ロゴ（星が大きい版）のPNG（3000×860px）。`logo-navy.png` と同じ画像を、分かりやすい名前で保存したもの |
-| `brand/logo-compact.svg` / `logo-compact-white.svg` | 星を控えめにした版。高さが限られる場所向け |
-| `brand/mark.svg` | 星のアイコン（紺の角丸四角）。ファビコン |
-| `brand/favicon-192.png` | ファビコン（192px） |
-| `favicon.ico` | ファビコン（16/32/48px。Google 検索結果用） |
-| `brand/apple-touch-icon.png` | iPhone のホーム画面アイコン（180px） |
-| `brand/og-image.png` | SNS 共有画像（1200×630px） |
+ロゴには「星が大きい版」と「星が小さい版」があります。
+
+- **星が大きい版**：サイトのヘッダーと同じロゴ。星の高さが文字の約5倍です。基本はこちらを使います。
+- **星が小さい版**：星の高さが文字の約2.4倍です。高さが限られる場所向けで、今のサイトでは使っていません。
+
+「透過」は背景が透明（ロゴだけ）という意味です。
+
+**ロゴ（名前と星）**
+
+| ファイル | 星 | 背景 | ロゴの色 | サイズ | 用途 |
+|---|---|---|---|---|---|
+| `brand/logo.svg` | 大 | 透過 | 紺の文字・明るい青の星 | SVG | 白・明るい背景の資料や名刺 |
+| `brand/logo-white.svg` | 大 | 透過 | 白 | SVG | サイトのヘッダー（黒）で使用。暗い背景向け |
+| `brand/logo-transparent.png` | 大 | 透過 | 紺の文字・明るい青の星 | 3000×727px | SVGが使えないアプリ・資料・SNS（明るい背景）。README のバナー（GitHub のライトモード） |
+| `brand/logo-white-transparent.png` | 大 | 透過 | 白 | 3000×727px | SVGが使えないアプリ・資料・SNS（暗い背景） |
+| `brand/logo-large-star-transparent.png` | 大 | 透過 | 白 | 3000×727px | `logo-white-transparent.png` と同じ画像を、分かりやすい名前で保存したもの。README のバナー（GitHub のダークモード） |
+| `brand/logo-black.png` | 大 | 黒（`#0a0c10`、サイトのヘッダーと同じ色） | 白 | 3000×860px | 背景色ごと使いたい資料・SNS |
+| `brand/logo-navy.png` | 大 | 紺（`#062a56`） | 白 | 3000×860px | 名刺・資料の表紙・署名 |
+| `brand/logo-large-star-navy.png` | 大 | 紺（`#062a56`） | 白 | 3000×860px | `logo-navy.png` と同じ画像を、分かりやすい名前で保存したもの |
+| `brand/logo-compact.svg` | 小 | 透過 | 紺の文字・明るい青の星 | SVG | 高さが限られる場所（今のサイトでは未使用） |
+| `brand/logo-compact-white.svg` | 小 | 透過 | 白 | SVG | 高さが限られる暗い場所（以前のヘッダーで使用。今のサイトでは未使用） |
+
+迷ったときは、暗い背景なら `logo-large-star-transparent.png`、明るい背景なら `logo-transparent.png`、背景ごと使うなら `logo-black.png` か `logo-navy.png` を選びます。白いロゴの透過版は、白い画面（GitHub のライトモードなど）では見えません。
+
+**アイコン・共有画像**
+
+| ファイル | 中身 | サイズ | 用途 |
+|---|---|---|---|
+| `brand/mark.svg` | 星だけ（青 `#0b4d94` の角丸四角） | SVG | ファビコン（ブラウザーのタブ） |
+| `brand/favicon-192.png` | 星だけ（同上） | 192×192px | ファビコン |
+| `favicon.ico` | 星だけ（同上） | 16/32/48px | ファビコン（Google 検索結果用） |
+| `brand/apple-touch-icon.png` | 星だけ（同上） | 180×180px | iPhone のホーム画面アイコン |
+| `brand/og-image.png` | ロゴ（星が大きい版・白）と「IT ENGINEER · TOKYO」 | 1200×630px | SNS 共有画像 |
 
 ### 作り直し方
 
@@ -405,6 +424,25 @@ python3 brand/build_logo.py
 rsvg-convert -w 192 -h 192 brand/mark.svg -o brand/favicon-192.png
 rsvg-convert -w 180 -h 180 -b '#0b4d94' brand/mark.svg -o brand/apple-touch-icon.png
 python3 -c "from PIL import Image; Image.open('brand/favicon-192.png').save('favicon.ico', sizes=[(16,16),(32,32),(48,48)])"
+```
+
+**ロゴのPNG**（透過版と背景つき版。同じく librsvg と Pillow を使う場合）
+
+```bash
+rsvg-convert -w 3000 brand/logo.svg -o brand/logo-transparent.png
+rsvg-convert -w 3000 brand/logo-white.svg -o brand/logo-white-transparent.png
+cp brand/logo-white-transparent.png brand/logo-large-star-transparent.png
+# 背景つき：透過版を幅2640pxに縮小し、3000×860px の背景の中央に置く（紺は #062a56、黒は #0a0c10）
+python3 -c "
+from PIL import Image
+logo = Image.open('brand/logo-white-transparent.png').convert('RGBA')
+logo = logo.resize((2640, round(logo.height * 2640 / logo.width)), Image.LANCZOS)
+for name, bg in [('logo-navy', '#062a56'), ('logo-black', '#0a0c10')]:
+    im = Image.new('RGBA', (3000, 860), bg)
+    im.alpha_composite(logo, ((3000 - logo.width) // 2, (860 - logo.height) // 2))
+    im.convert('RGB').save(f'brand/{name}.png')
+"
+cp brand/logo-navy.png brand/logo-large-star-navy.png
 ```
 
 **SNS 共有画像**：`_src/og-image.html` を Chrome で開き、開発者ツールで表示サイズを 1200×630 にして「スクリーンショットをキャプチャ」し、`brand/og-image.png` として保存します。
@@ -557,6 +595,7 @@ python3 -m http.server 8000
 - 英語版（`/`）と日本語版（`/ja/`）を別ページに分割（hreflang 対応）
 - 共有画像（SNS・README のバナー）から勤務先を外し、名前を大きくして「IT ENGINEER · TOKYO」に
 - ロゴの北極星をブライトブルーに（カラー版）。サイトのヘッダーを黒にして、白ロゴ（星が大きい版）を表示
+- ロゴの透過PNG・黒背景と紺背景のPNGを追加。README のバナーを透過ロゴに（GitHub のライト / ダークモードで切り替え）
 - README を作成（`.github/README.md`）
 
 ---
