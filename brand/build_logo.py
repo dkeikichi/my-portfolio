@@ -8,7 +8,7 @@ needle star, tilted in perspective with the north-east heading ray extended.
     python3 brand/build_logo.py
 
 Fonts are downloaded from Google Fonts into brand/.fonts/ on first run.
-PNG files (favicon-32, apple-touch-icon, og-image) are rendered from these
+PNG/ICO files (favicon.ico, favicon-192, apple-touch-icon, og-image) are rendered from these
 SVGs in a browser and are not produced by this script.
 """
 import math
