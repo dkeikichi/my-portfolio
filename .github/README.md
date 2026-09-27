@@ -1,4 +1,4 @@
-[![KEIKICHI DEN — IT Engineer · ANA Systems · Tokyo](/brand/og-image.png)](https://dkeikichi.com/)
+[![KEIKICHI DEN — IT Engineer](/brand/og-image.png)](https://dkeikichi.com/)
 
 # dkeikichi.com
 
