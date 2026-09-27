@@ -1,31 +1,13 @@
 // ============================================================
-// Language toggle (EN ⇄ JA)
+// Language links (/ ⇄ /ja/): remember the visitor's choice so a
+// later visit to "/" can go straight to /ja/ (see <head> in index.html)
 // ============================================================
 (function () {
-    var enBtn = document.getElementById('lang-en-btn');
-    var jaBtn = document.getElementById('lang-ja-btn');
-    // Keep the English title in sync with <title> in index.html: Google reads the title after scripts run.
-    var titles = {
-        en: 'Keikichi Den (田 慶吉) — IT Engineer at ANA Systems',
-        ja: '田 慶吉（デン ケイキチ）— ANAシステムズ ITエンジニア'
-    };
-
-    function setLang(lang) {
-        document.documentElement.lang = lang;
-        document.title = titles[lang];
-        try { localStorage.setItem('lang', lang); } catch (e) {}
-        var isEn = lang === 'en';
-        enBtn.classList.toggle('active', isEn);
-        jaBtn.classList.toggle('active', !isEn);
-        enBtn.setAttribute('aria-pressed', String(isEn));
-        jaBtn.setAttribute('aria-pressed', String(!isEn));
-    }
-
-    enBtn.addEventListener('click', function () { setLang('en'); });
-    jaBtn.addEventListener('click', function () { setLang('ja'); });
-
-    // Sync button state with the language chosen pre-paint in <head>.
-    setLang(document.documentElement.lang === 'ja' ? 'ja' : 'en');
+    document.querySelectorAll('.lang-toggle a[hreflang]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            try { localStorage.setItem('lang', link.getAttribute('hreflang')); } catch (e) {}
+        });
+    });
 })();
 
 // ============================================================
